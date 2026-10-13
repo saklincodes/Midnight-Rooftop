@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="author" content="@saklin_01 (GitHub: @saklincodes)">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Midnight Rooftop — Minimalist Sketch Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fullscreen Animation Stage -->
+  <div id="stage" class="stage" role="region" aria-label="Midnight Rooftop Sketch Animation">
+    <!-- SVG Line Art Layer -->
+    <svg id="sketch-svg" class="sketch-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <!-- Subtle linear gradient for pen tip micro-illumination (crisp, zero neon glow) -->
+        <radialGradient id="pen-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+          <stop offset="45%" stop-color="#ffffff" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+
+      <!-- Phase 1 Layer: Continuous Outer Silhouette (~7.5s) -->
+      <g id="layer-phase1" class="layer-phase1"></g>
+
+      <!-- Phase 2 Layer: Essential Structural Details (~4.2s) -->
+      <g id="layer-phase2" class="layer-phase2"></g>
+
+      <!-- Stars Layer -->
+      <g id="layer-stars" class="layer-stars"></g>
+
+      <!-- Precision Pen Tip Cursor -->
+      <g id="pen-cursor" class="pen-cursor" opacity="0">
+        <circle id="pen-halo" cx="0" cy="0" r="4.5" fill="url(#pen-glow)" />
+        <circle id="pen-dot" cx="0" cy="0" r="1.6" fill="#ffffff" />
+      </g>
+    </svg>
+
+    <!-- Canvas Layer for Fast Micro-Sparkle Particle Trail -->
+    <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Discreet HUD Toast for Status / Shortcuts (auto-hides to preserve pure OLED black) -->
+    <div id="status-toast" class="status-toast" aria-live="polite"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
