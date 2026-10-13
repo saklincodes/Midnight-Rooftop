@@ -12,14 +12,6 @@ Built with pure Vanilla JavaScript, SVG, and HTML5 Canvas with **zero external d
 
 ---
 
-## Preview
-
-![Midnight Rooftop Silhouette](Moonlit Rooftop Silhouette.png)
-
-> An intimate rooftop scene rendered in pure OLED black (`#000000`) and razor-sharp white linework (`#ffffff`).
-
----
-
 ## Motivation & Aesthetic Vision
 
 Most online sketch animations suffer from blurry canvas downscaling, heavy external libraries (like GSAP or Vivus), or unoptimized stroke sequences that jump erratically across the screen. 
